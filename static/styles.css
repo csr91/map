@@ -1,0 +1,84 @@
+body {
+    background-color: #f0f0f0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primaryColor: #CA2128;
+    --secondaryColor: #171717;
+    --tertiaryColor: #3d3d3d;
+}
+
+header.blur:not(.opened) nav.brand {
+    -webkit-backdrop-filter: blur(7px);
+    backdrop-filter: blur(7px);
+    background-color: var(--secondaryColor);
+}
+
+header nav.brand {
+    background-color: var(--secondaryColor);
+    position:static;
+    width: 100%;
+    z-index: 99;
+}
+
+nav {
+    display: block;
+}
+
+.navbarr {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: var(--secondaryColor);
+}
+
+.navbarr a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+.toggle-button {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    margin-top: 1%;
+    margin-right: 5vh;
+}
+
+.bar {
+    background-color: white;
+    width: 25px;
+    height: 3px;
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+.nav-links {
+    margin-top: 1.5%;
+    margin-left: -3%;
+    justify-content: space-between;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: medium; /* Tamaño big */
+    font-weight: bold; /* Negrita */
+    text-align: center; /* Centro el texto horizontalmente */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.5s ease-in-out, visibility 1.5s ease-in-out;
+}
+
+.nav-links a {
+    justify-content: space-between;
+    
+    color: white;
+    text-decoration: none; /* Eliminar subrayado en los enlaces */
+}
+
+.nav-links.show {
+    justify-content: space-between;
+    opacity: 1;
+    visibility: visible;
+}

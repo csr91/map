@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar con Estilo</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <!-- Incluye los estilos de Leaflet y Leaflet.draw -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-draw/dist/leaflet.draw.css" />
+    <style>
+        #map-container {
+            height: 500px;
+            width: 100%;
+        }
+        #coordinates {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="blur">
+        <nav class="brand">
+            <div class="navbarr">
+                <div>
+                    <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+                </div>
+                <div class="nav-links">
+                    <a href="#">Iniciar Sesion</a>
+                    <a href="#">Guardar Proyecto</a>
+                    <a href="#">Buscar SMP</a>
+                </div>                
+                <div class="toggle-button" id="toggleBtn">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>                
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenido de la página -->
+    <div id="map-container"></div>
+    <div id="coordinates"></div>
+
+    <button id="enviarBtn">Enviar Coordenadas</button>
+
+    <div id="respuesta-servidor"></div>
+
+    <button id="enviarBtn">analizar parcelas</button>
+
+
+    <!-- Incluye las bibliotecas de Leaflet y Leaflet.draw -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-draw/dist/leaflet.draw.js"></script>
+    <!-- Tu script de inicialización del mapa -->
+    <script src="static/index.js"></script>
+</body>
+
+</html>
